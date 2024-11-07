@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume - Aidan Taggart</title>
+
+    <script src="js/visitor-counter.js"></script>
+    <script>
+        visitorCounter();
+    </script>
+
+    <style>
+        /* Reset default styles and set up basic formatting */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .resume {
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+
+        /* Visitor counter styling */
+        .visitor-counter-box {
+            display: inline-block; /* Ensures the span behaves like a block element */
+            padding: 20px 30px; /* Adds some padding to make the box larger */
+            background-color: #28a745; /* A green color */
+            color: white; /* White text color */
+            border-radius: 10px; /* Rounded corners for a softer look */
+            font-size: 1.5em; /* Increases the text size */
+            font-weight: bold; /* Makes the text bold */
+            text-align: center; /* Centers the text within the box */
+        }
+
+        /* Header styling */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .name {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+
+        /* Section styling */
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+        }
+
+        /* Experience and Education entries */
+        .entry {
+            margin-bottom: 20px;
+        }
+
+        .entry-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .entry-subtitle {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .entry-date {
+            color: #95a5a6;
+            font-size: 0.9em;
+        }
+
+        .entry-details {
+            margin-top: 8px;
+        }
+
+        /* Skills section */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .skill-item {
+            background-color: #f0f3f7;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background: none;
+            }
+
+            .resume {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Visitor #: <span id="visitor-counter" class="visitor-counter-box"></span>
+    </p>
+    <!-- Main resume container -->
+    <div class="resume">
+        <!-- ===== HEADER SECTION ===== -->
+        <!-- Replace the information below with your own -->
+        <header class="header">
+            <h1 class="name">Your Full Name</h1>
+            <div class="contact-info">
+                📧 arkdetriump@gmail.com | 📱 (123) 456-7890
+            </div>
+            <div class="contact-info">
+                📍 Los Angeles, Ca | 💼 linkedin.com/in/aidantaggart
+            </div>
+        </header>
+
+        <!-- ===== SUMMARY SECTION ===== -->
+        <section class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p>
+                Experienced professional with expertise in [your key skills]. Demonstrated history of [your major achievement]. Passionate about [your interests/specialties] with a focus on [your goal/objective].
+            </p>
+        </section>
+
+        <!-- ===== EXPERIENCE SECTION ===== -->
+        <section class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <!-- Copy this entry block for each job position -->
+            <div class="entry">
+                <div class="entry-title">Job Title</div>
+                <div class="entry-subtitle">Company Name</div>
+                <div class="entry-date">Month Year - Present</div>
+                <ul class="entry-details">
+                    <li>Key achievement or responsibility 1</li>
+                    <li>Key achievement or responsibility 2</li>
+                    <li>Key achievement or responsibility 3</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-title">Previous Job Title</div>
+                <div class="entry-subtitle">Previous Company Name</div>
+                <div class="entry-date">Month Year - Month Year</div>
+                <ul class="entry-details">
+                    <li>Key achievement or responsibility 1</li>
+                    <li>Key achievement or responsibility 2</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== EDUCATION SECTION ===== -->
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="entry">
+                <div class="entry-title">Degree Name</div>
+                <div class="entry-subtitle">University Name</div>
+                <div class="entry-date">Graduation Year</div>
+                <div class="entry-details">
+                    Relevant coursework, honors, or achievements
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS SECTION ===== -->
+        <section class="section">
+            <h2 class="section-title">Skills</h2>
+            <ul class="skills-list">
+                <!-- Add or remove skill items as needed -->
+                <li class="skill-item">Skill 1</li>
+                <li class="skill-item">Skill 2</li>
+                <li class="skill-item">Skill 3</li>
+                <li class="skill-item">Skill 4</li>
+                <li class="skill-item">Skill 5</li>
+                <li class="skill-item">Skill 6</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
