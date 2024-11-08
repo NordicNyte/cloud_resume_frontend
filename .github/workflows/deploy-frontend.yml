@@ -1,0 +1,27 @@
+name: Deploy to S3
+
+# Define when the action should run
+on:
+  push:
+    branches:
+      - main
+
+# Define the jobs that will run in the workflow
+jobs:
+    deploy:
+        # specify environment
+        runs-on: ubuntu-latest
+        # Define the steps that will be executed 
+        steps:
+            # Checkout the code from the repository
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+
+            # Sync the files to S3 Bucket
+            - name: Sync files to S3
+              run: aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete 
+              env:
+                AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                AWS_DEFAULT_REGION: us-east-1
