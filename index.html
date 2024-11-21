@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Resume - Aidan Taggart</title>
+    <title>Aidan Taggart's Resume</title>
 
+    <!-- Link to external visitor counter script -->
     <script src="js/visitor-counter.js"></script>
     <script>
         visitorCounter();
     </script>
 
     <style>
-        /* Reset default styles and set up basic formatting */
+        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -20,192 +21,238 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            line-height: 1.5;
             color: #333;
-            max-width: 850px;
-            margin: 40px auto;
+            background-color: #f8f9fa;
             padding: 20px;
-            background-color: #f5f5f5;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .resume {
-            background-color: white;
+            background: #fff;
             padding: 40px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            border-radius: 5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Visitor counter styling */
-        .visitor-counter-box {
-            display: inline-block; /* Ensures the span behaves like a block element */
-            padding: 20px 30px; /* Adds some padding to make the box larger */
-            background-color: #28a745; /* A green color */
-            color: white; /* White text color */
-            border-radius: 10px; /* Rounded corners for a softer look */
-            font-size: 1.5em; /* Increases the text size */
-            font-weight: bold; /* Makes the text bold */
-            text-align: center; /* Centers the text within the box */
-        }
-
-        /* Header styling */
         .header {
             text-align: center;
             margin-bottom: 30px;
         }
 
-        .name {
-            font-size: 2.5em;
+        .header h1 {
+            font-size: 2.5rem;
             color: #2c3e50;
-            margin-bottom: 10px;
         }
 
-        .contact-info {
+        .header .contact-info {
+            margin-top: 10px;
             color: #7f8c8d;
-            margin-bottom: 5px;
         }
 
-        /* Section styling */
+        /* Visitor Counter */
+        .visitor-counter-box {
+            text-align: center;
+            background: #28a745;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            border-radius: 12px;
+            margin: 20px auto;
+            display: inline-block;
+        }
+
         .section {
             margin-bottom: 25px;
         }
 
-        .section-title {
-            font-size: 1.5em;
-            color: #2c3e50;
+        .section h2 {
+            font-size: 1.8rem;
             border-bottom: 2px solid #3498db;
+            color: #2c3e50;
             margin-bottom: 15px;
-            padding-bottom: 5px;
         }
 
-        /* Experience and Education entries */
         .entry {
             margin-bottom: 20px;
         }
 
-        .entry-title {
+        .entry h3 {
             font-weight: bold;
             color: #2c3e50;
+            margin-bottom: 5px;
         }
 
-        .entry-subtitle {
+        .entry .details {
             color: #7f8c8d;
             font-style: italic;
         }
 
-        .entry-date {
-            color: #95a5a6;
-            font-size: 0.9em;
-        }
-
-        .entry-details {
-            margin-top: 8px;
-        }
-
-        /* Skills section */
-        .skills-list {
+        .skills-list,
+        .certifications-list,
+        .courses-list {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             list-style: none;
+            padding: 0;
         }
 
-        .skill-item {
-            background-color: #f0f3f7;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.9em;
-        }
-
-        /* Print styles */
-        @media print {
-            body {
-                margin: 0;
-                padding: 0;
-                background: none;
-            }
-
-            .resume {
-                box-shadow: none;
-                padding: 20px;
-            }
+        .skills-list li,
+        .certifications-list li,
+        .courses-list li {
+            background: #e3e4e8;
+            padding: 8px 15px;
+            border-radius: 12px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
+    <!-- Visitor Counter -->
     <p>
         Visitor #: <span id="visitor-counter" class="visitor-counter-box"></span>
     </p>
-    <!-- Main resume container -->
+
     <div class="resume">
-        <!-- ===== HEADER SECTION ===== -->
-        <!-- Replace the information below with your own -->
-        <header class="header">
-            <h1 class="name">Aidan Taggart</h1>
-            
-            <div class="contact-info">
-                📍 Los Angeles, Ca | 💼 linkedin.com/in/aidantaggart
-            </div>
-        </header>
+        <!-- Header -->
+        <div class="header">
+            <h1>Aidan Taggart</h1>
+            <p class="contact-info">📍 San Diego, CA | 💼 linkedin.com/in/aidantaggart</p>
+        </div>
 
-        <!-- ===== SUMMARY SECTION ===== -->
+        <!-- Objective -->
         <section class="section">
-            <h2 class="section-title">Professional Summary</h2>
-            <p>
-                Experienced professional with expertise in [your key skills]. Demonstrated history of [your major achievement]. Passionate about [your interests/specialties] with a focus on [your goal/objective].
-            </p>
+            <h2>Objective</h2>
+            <p>Motivated and passionate automotive enthusiast double-majoring in Entrepreneurship and Information Systems+Business Analytics seeking a summer internship in the automotive industry.</p>
         </section>
 
-        <!-- ===== EXPERIENCE SECTION ===== -->
+        <!-- Education -->
         <section class="section">
-            <h2 class="section-title">Professional Experience</h2>
-            
-            <!-- Copy this entry block for each job position -->
+            <h2>Education</h2>
             <div class="entry">
-                <div class="entry-title">Job Title</div>
-                <div class="entry-subtitle">Company Name</div>
-                <div class="entry-date">Month Year - Present</div>
-                <ul class="entry-details">
-                    <li>Key achievement or responsibility 1</li>
-                    <li>Key achievement or responsibility 2</li>
-                    <li>Key achievement or responsibility 3</li>
-                </ul>
+                <h3>B.A. Entrepreneurship</h3>
             </div>
-
             <div class="entry">
-                <div class="entry-title">Previous Job Title</div>
-                <div class="entry-subtitle">Previous Company Name</div>
-                <div class="entry-date">Month Year - Month Year</div>
-                <ul class="entry-details">
-                    <li>Key achievement or responsibility 1</li>
-                    <li>Key achievement or responsibility 2</li>
+                <h3>B.S. Information Systems and Business Analytics</h3>
+                <p class="details">August 2020 - May 2025 (anticipated) | GPA: 3.68</p>
+            </div>
+            <div class="entry">
+                <h4>Relevant Courses</h4>
+                <ul class="courses-list">
+                    <li>Operations & Supply Chain Management</li>
+                    <li>Database Management Systems</li>
+                    <li>System Analysis & Design (UMD/BPMN/AGILE)</li>
+                    <li>SQL for Business Apps</li>
+                    <li>Web App Development</li>
+                    <li>Network & Cloud Computing</li>
+                    <li>Intro to Machine Learning</li>
+                    <li>Entrepreneurial Marketing</li>
+                    <li>New Venture Creation</li>
+                    <li>Entrepreneurial Finance</li>
+                    <li>Intro to Marketing</li>
+                    <li>Intro to Finance</li>
+                    <li>Intro to Investments</li>
                 </ul>
             </div>
         </section>
 
-        <!-- ===== EDUCATION SECTION ===== -->
+        <!-- Skills -->
         <section class="section">
-            <h2 class="section-title">Education</h2>
-            <div class="entry">
-                <div class="entry-title">Degree Name</div>
-                <div class="entry-subtitle">University Name</div>
-                <div class="entry-date">Graduation Year</div>
-                <div class="entry-details">
-                    Relevant coursework, honors, or achievements
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== SKILLS SECTION ===== -->
-        <section class="section">
-            <h2 class="section-title">Skills</h2>
+            <h2>Skills</h2>
             <ul class="skills-list">
-                <!-- Add or remove skill items as needed -->
-                <li class="skill-item">Skill 1</li>
-                <li class="skill-item">Skill 2</li>
-                <li class="skill-item">Skill 3</li>
-                <li class="skill-item">Skill 4</li>
-                <li class="skill-item">Skill 5</li>
-                <li class="skill-item">Skill 6</li>
+                <li>MySQL</li>
+                <li>JavaScript</li>
+                <li>HTML & CSS</li>
+                <li>Firebase</li>
+                <li>React</li>
+                <li>Microsoft Office</li>
+            </ul>
+        </section>
+
+        <!-- Certifications -->
+        <section class="section">
+            <h2>Certifications</h2>
+            <ul class="certifications-list">
+                <li>American Red Cross Lifeguard CPR/AED & Emergency Oxygen</li>
+                <li>AWS CCP</li>
+            </ul>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="section">
+            <h2>Work Experience</h2>
+            <div class="entry">
+                <h3>Motorsports Marketing Intern - Cyclone Technology</h3>
+                <p class="details">May 2024 - August 2024</p>
+                <ul>
+                    <li>Moved from Los Angeles to Phoenix, AZ for the summer of 2024.</li>
+                    <li>Gained experience in critical verticals of a technology manufacturer: Inventory Management, Production, Engineering, Marketing, Sales.</li>
+                    <li>Helped manage company website via WordPress.</li>
+                    <li>Created marketing pieces for professional racing leagues and racetracks.</li>
+                    <li>Created content for company social media.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Founding Partner - Queen's Bagels</h3>
+                <p class="details">May 2019 - Present | Loyola Marymount University</p>
+                <ul>
+                    <li>Started campus food delivery business with dorm-mates.</li>
+                    <li>Accepted into LMU's Spring 2024 business incubator program.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Surfing Instructor - Fulcrum Surf</h3>
+                <p class="details">June 2014 - August 2022 | San Diego, CA</p>
+                <ul>
+                    <li>Promoted from intern to premier coach.</li>
+                    <li>Built a loyal network of clients.</li>
+                    <li>Assisted with company email marketing campaigns.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>LMU Head Lifeguard - Campus Recreation Center</h3>
+                <p class="details">Feb. 2023 - Present | Loyola Marymount University</p>
+                <ul>
+                    <li>Managing up to 4 guards on shift.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects and Leadership Experience -->
+        <section class="section">
+            <h2>Projects and Leadership Experience</h2>
+            <div class="entry">
+                <h3>President & Treasurer - LMU Autoclub</h3>
+                <ul>
+                    <li>Planned and fundraised for events like private track days, canyon drives, and car meets.</li>
+                    <li>Expanded scope of events and worked extensively with LMU departments.</li>
+                    <li>Increased membership and budget by more than 20%.</li>
+                    <li>Developed partnerships with motorsports shops, sim racing orgs, and other collegiate auto clubs.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Information Systems & Business Analytics Capstone Project</h3>
+                <p>Developed ISBA Department Outreach Platform using LinkedIn data scraping for alumni and donor engagement.</p>
+            </div>
+            <div class="entry">
+                <h3>Project Car: BMW F30 340i X-Drive 6MT</h3>
+                <ul>
+                    <li>Researched and installed aftermarket upgrades to enhance performance.</li>
+                    <li>Learned about automotive mechanics and their effect on driving dynamics.</li>
+                    <li>Practiced driving techniques on racing simulators.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Activities -->
+        <section class="section">
+            <h2>Activities</h2>
+            <ul>
+                <li>LMU Ping Pong Club: Founder</li>
+                <li>Entrepreneurship Society</li>
+                <li>ISBA Society</li>
             </ul>
         </section>
     </div>
